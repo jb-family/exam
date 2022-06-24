@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	
+	<style>
+		body {
+			margin: 0px;
+			padding: 0px;
+		}
+		
+		input {
+			padding: 10px;
+			margin: 5px;
+			text-align:right;
+			width:285px;
+			height:50px;
+		}
+	
+		button {
+			padding: 20px;
+			margin: 5px;
+			border: 1px solid black;
+			background-color: black;
+			color:white;
+			border:none;
+			width:65px;
+			border-radius:50%;
+		}
+		
+		button:hover {
+   	 		opacity: .5;
+		}
+		
+	</style>
+</head>
+<body>
+	<input type="text" id="display"  value=""><br>
+	<button id="7" value="7">7</button>
+	<button id="8" value="8">8</button>
+	<button id="9" value="9">9</button>
+	<button id="/" value="/">/</button><br>
+	<button id="4" value="4">4</button>
+	<button id="5" value="5">5</button>
+	<button id="6" value="6">6</button>
+	<button id="*" value="*">*</button><br>
+	<button id="1" value="1">1</button>
+	<button id="2" value="2">2</button>
+	<button id="3" value="3">3</button>
+	<button id="-" value="-">-</button><br>
+	<button id="0" value="0">0</button>
+	<button id="c" value="c">c</button>
+	<button id="=" value="=">=</button>
+	<button id="+" value="+">+</button>
+
+	
+	
+	<script type="text/javascript">
+		
+		window.onload = function() {
+			var c7 = document.getElementById("7");
+			var c8 = document.getElementById("8");
+			var c9 = document.getElementById("9");
+			var div = document.getElementById("/");
+			var c4 = document.getElementById("4");
+			var c5 = document.getElementById("5");
+			var c6 = document.getElementById("6");
+			var mul = document.getElementById("*");
+			var c1 = document.getElementById("1");
+			var c2 = document.getElementById("2");
+			var c3 = document.getElementById("3");
+			var mius = document.getElementById("-");
+			var c0 = document.getElementById("0");
+			var cle = document.getElementById("c");
+			var equals = document.getElementById("=");
+			var plus = document.getElementById("+");
+			var display = document.getElementById("display");
+
+			
+			
+			
+				c7.onclick = function() {
+					display.value += c7.value;
+				} 
+				
+				c8.onclick = function() {
+					display.value += c8.value;
+				} 
+				
+				c9.onclick = function() {
+					display.value += c9.value;
+				} 
+				
+				div.onclick = function() {
+					display.value += div.value;
+				} 
+				
+				c4.onclick = function() {
+					display.value += c4.value;
+				}
+				
+				c5.onclick = function() {
+					display.value += c5.value;
+				} 
+				
+				c6.onclick = function() {
+					display.value += c6.value;
+				} 
+				
+				mul.onclick = function() {
+					display.value += mul.value;
+				} 
+				
+				c1.onclick = function() {
+					display.value += c1.value;
+				} 
+				
+				c2.onclick = function() {
+					display.value += c2.value;
+				} 
+				
+				c3.onclick = function() {
+					display.value += c3.value;
+				} 
+				
+				mius.onclick = function() {
+					display.value += mius.value;
+					
+				} 
+				
+				c0.onclick = function() {
+					display.value += c0.value;
+				} 
+				
+				equals.onclick = function() {
+					display.value = eval(display.value);
+				} 
+				
+				plus.onclick = function() {
+					display.value += plus.value;
+					
+				} 
+				
+				cle.onclick = function() {
+					display.value = "";
+				} 
+				
+				
+				
+					 
+		}
+	
+	
+	
+	</script>
+	
+	
+</body>
+</html>

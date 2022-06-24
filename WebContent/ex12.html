@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+	<h1>자바스크립트</h1>
+	
+	<h2>함수(function)</h2>
+
+	
+	<script type="text/javascript">
+	
+	//실험1
+	/* 
+		//함수호출
+		checkScope();
+	
+	
+		//전역변수
+		var name = "global";	
+	
+		function checkScope() {
+			//지역변수
+			var name = "local";
+			
+			console.log(name);
+		}
+		//함수호출
+		checkScope();
+		
+		
+		console.log(name); */
+		
+	//실험2
+	var name = "global";
+		function checkScope() {
+			// function 안에 var를 사용하면 지역변수 
+			// function 안에 var업시 사용하면 전역변수
+			 name = "local";
+			 name2 = "로컬";
+		}
+		
+	checkScope();
+	console.log(name);	//global
+	console.log(name2);	//로컬
+	</script>
+</body>
+</html>

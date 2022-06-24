@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>자바스크립트</h1>
+	
+	<h2>변수</h2>
+	
+	<script type="text/javascript">
+	
+		/*
+			변수선언법 : 자료형을 쓰지 않는다. var const 사용
+		*/
+	
+		console.log("변수선언");
+		var no;
+		var str;
+		var boo;
+		/*
+			number no;
+			string str;
+			boolean boo;
+		*/
+		var myAge = 25;
+	</script>
+	
+	
+	<script type="text/javascript">
+		/* 같은 이름 변수 선언 */
+		
+		var person = "정우성";
+		console.log(person);
+		var person = "이효리";
+		console.log(person);
+	</script>
+	
+	<script type="text/javascript">
+		/* 대입 시 자료형이 결정된다. */
+		var data;
+		console.log(typeof data);
+		
+		data = 15;
+		console.log(typeof data);
+		
+		data = "알라링";
+		console.log(typeof data);
+		
+		data = 5 < 3;
+		console.log(typeof data);
+	</script>
+	
+	<script type="text/javascript">
+		console.log("undefined, null 비교");
+		
+		var myVar01;
+		console.log(typeof myVar01);
+		console.log(myVar01);
+		
+		var myVar02 = null;
+		console.log(typeof myVar02);
+	</script>
+	
+	<script type="text/javascript">
+		/* ==, === 비교 */
+		console.log("undefined, null 비교");
+		
+		console.log("123" == 123);	//t ==는 모양만 비교
+		console.log("123" === 123);	//f ===는 모양과 타입까지 같은지 비교
+		
+		console.log(myVar01 == myVar02);	//t undefined == null
+		console.log(myVar01 === myVar02);	//f undefined === null
+	
+		console.log('' == false);	//t
+		console.log('' == 0);		//t
+		console.log(0 == false);	//t
+		
+		console.log('' === false);	//f
+		console.log('' === 0);		//f
+		console.log(0 === false);	//f
+		
+		console.log("=========================");
+		console.log('' == false);
+		console.log('' ===  false);
+		
+	</script>
+	
+	
+	
+	
+	
+</body>
+</html>

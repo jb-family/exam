@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+	
+	<input type="text" id="left" value=""> + <input type ="text" id="right" value="">
+	<button id="btn">더하기</button>
+	
+	<p id="p">결과값</p>
+	
+	<script type="text/javascript">
+	
+	window.onload = function() {
+	
+	var btn = document.getElementById("btn");
+	var left = document.getElementById("left");
+	var right = document.getElementById("right");
+	var sum = document.getElementById("sum");
+	
+	//버튼 클릭이벤트
+	btn.onclick = function(){
+		
+		console.log("버튼클릭");
+		
+		
+		var leftV = parseInt(left.value);
+		var rightV = parseInt(right.value);
+		sum = leftV + rightV;
+		console.log(sum);
+		
+		
+		p.innerHTML = sum;
+		
+		};
+	
+		
+	
+	};
+	
+	</script>
+	
+	
+	
+	
+</body>
+</html>

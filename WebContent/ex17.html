@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+	<h1>자바스크립트</h1>
+	
+	<h2>이벤트	(~할때)</h2>
+	
+	<div>
+		<button id="btn" type="button">테스트 버튼</button>
+		<h3 id="display"><font color="red">이름출력영역</font></h3>
+	</div>
+	
+	
+	
+	<script type="text/javascript">
+	
+	
+	window.onload = function(){
+		//document.getElementById = html에서 id를 js로 바꾸는 방법.
+		var testButton = document.getElementById("btn"); // id = btn 태그 --> 자바스크립트 객체화
+		var testArea = document.getElementById("display"); // id - bisplay 태그 --> 자바스크립트 객체화
+		
+		//onclick 이벤트 생성
+		testButton.onclick = function(){
+			console.log(testArea.innerHTML = ' <font color="blue">황일영</font> ');
+			
+			
+		};
+		
+		
+		console.log(testButton);	
+		
+	
+	};
+	
+	
+	
+	
+	</script>
+	
+</body>
+</html>
