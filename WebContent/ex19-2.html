@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	
+	<style type="text/css">
+
+		.calculator {
+			padding:10px;
+			width:260px;
+			height:325px;
+			background-color:black;
+		
+		}
+		
+		.calculator form {
+			display:grid;
+			grid-template-columns: repeat(4, 65px);
+			grid-auto-rows:65px;
+		}	
+	
+		.calculator form input[type="text"] {
+	  		grid-column: span 4;
+	  		text-align: right;
+			padding: 0 10px; 
+			background-color:orange; 
+		}
+		
+		.calculator .operator {
+			background-color:green;
+		}
+		
+		.calculator .num {
+			background-color:grey;
+		}
+		
+		.calculator form input[type="button"]:hover {
+	   	 		opacity: .8;
+		}
+	
+	</style>
+	
+	
+	
+</head>
+<body>
+	<div class="calculator">
+		<form>
+			<input type="text" id="display">
+			<input type="button" id="7" class="num" value="7">
+			<input type="button" id="8" class="num" value="8">
+			<input type="button" id="9" class="num" value="9">
+			<input type="button" class="op" id="/" class="operator" value="/">
+			<input type="button" id="4" class="num" value="4">
+			<input type="button" id="5" class="num" value="5">
+			<input type="button" id="6" class="num" value="6">
+			<input type="button" class="op" id="*" class="operator" value="*">
+			<input type="button" id="1" class="num" value="1">
+			<input type="button" id="2" class="num" value="2">
+			<input type="button" id="3" class="num" value="3">
+			<input type="button" class="op" id="-" class="operator" value="-">
+			<input type="button" id="0" class="num" value="0">
+			<input type="button" id="c" class="operator" value="C">
+			<input type="button" id="=" class="operator" value="=">
+			<input type="button" class="op" id="+" class="operator" value="+">
+		</form>
+	</div>
+	
+	
+	
+	<script type="text/javascript">
+	
+		var c7 = document.getElementById("7");
+		var c8 = document.getElementById("8");
+		var c9 = document.getElementById("9");
+		var div = document.getElementById("/");
+		var c4 = document.getElementById("4");
+		var c5 = document.getElementById("5");
+		var c6 = document.getElementById("6");
+		var mul = document.getElementById("*");
+		var c1 = document.getElementById("1");
+		var c2 = document.getElementById("2");
+		var c3 = document.getElementById("3");
+		var mius = document.getElementById("-");
+		var c0 = document.getElementById("0");
+		var cle = document.getElementById("c");
+		var equals = document.getElementById("=");
+		var plus = document.getElementById("+");
+		var display = document.getElementById("display");
+		var op = document.getElementsByClassName("op");
+		
+		
+		var boo = true;
+		var i = 0;
+		var j = 0;
+		var result = 0;
+		
+		c7.onclick = function() {
+			if(boo === true) {
+				display.value += c7.value;
+				i = display.value;
+			}else {
+				display.value += c7.value;
+				j = display.value;
+			}
+		} 
+		
+		c8.onclick = function() {
+			if(boo === true) {
+				display.value += c8.value;
+				i = display.value;
+			}else {
+				display.value += c8.value;
+				j = display.value;
+			}
+		} 
+		
+		c9.onclick = function() {
+			if(boo === true) {
+				display.value += c9.value;
+				i = display.value;
+			}else {
+				display.value += c9.value;
+				j = display.value;
+			}
+		} 
+		
+		div.onclick = function() {
+			boo = false
+			if(boo === false) {
+				i = display.value;
+				display.value = "";
+				op = "/";
+			}
+		} 
+		
+		c4.onclick = function() {
+			if(boo === true) {
+				display.value += c4.value;
+				i = display.value;
+			}else {
+				display.value += c4.value;
+				j = display.value;
+			}
+		}
+		
+		c5.onclick = function() {
+			if(boo === true) {
+				display.value += c5.value;
+				i = display.value;
+			}else {
+				display.value += c5.value;
+				j = display.value;
+			}
+		} 
+		
+		c6.onclick = function() {
+			if(boo === true) {
+				display.value += c6.value;
+				i = display.value;
+			}else {
+				display.value += c6.value;
+				j = display.value;
+			}
+		} 
+		
+		mul.onclick = function() {
+			boo = false
+			if(boo === false) {
+				i = display.value;
+				display.value = "";
+				op = "*";
+			}
+		} 
+		
+		c1.onclick = function() {
+			if(boo === true) {
+				display.value += c1.value;
+				i = display.value;
+			}else {
+				display.value += c1.value;
+				j = display.value;
+			}
+		} 
+		
+		c2.onclick = function() {
+			if(boo === true) {
+				display.value += c2.value;
+				i = display.value;
+			}else {
+				display.value += c2.value;
+				j = display.value;
+			}
+		} 
+		
+		c3.onclick = function() {
+			if(boo === true) {
+				display.value += c3.value;
+				i = display.value;
+			}else {
+				display.value += c3.value;
+				j = display.value;
+			}
+		} 
+		
+		mius.onclick = function() {
+			boo = false
+			if(boo === false) {
+				i = display.value;
+				display.value = "";
+				op = "-";
+			}
+			
+		} 
+		
+		c0.onclick = function() {
+			if(boo === true) {
+				display.value += c0.value;
+				i = display.value;
+			}else {
+				display.value += c0.value;
+				j = display.value;
+			}
+		} 
+		
+		equals.onclick = function() {
+			i = parseInt(i);
+			j = parseInt(j);
+			display.value = calculator();
+			boo = true;
+		} 
+		
+		plus.onclick = function() {
+			i = display.value;
+			boo = false
+			display.value = "";
+			op = "+";
+		} 
+		
+		cle.onclick = function() {
+			display.value = "";
+		} 
+		
+		
+		
+		////////////////////////switch문///////////////////////
+		var calculator = function () {
+			switch(op) {
+				case "+" : return plus(i, j);
+				
+				case "-" : return mius(i, j);
+				
+				case "/" : return div(i, j);
+
+				case "*" : return mul(i, j);
+			}
+			
+		}
+		//////////////////////// 계산함수 ///////////////////////
+
+		var plus = function (i, j) {
+			result = i + j;
+			return result;
+		}
+		
+		var mius = function (i, j) {
+			result = i - j;
+			return result;
+		}
+	
+		var div = function (i, j) {
+			result = i / j;
+			return result;
+		}
+		
+		var mul = function (i, j) {
+			result = i * j;
+			return result;
+		}
+		
+		
+	</script>
+	
+</body>
+</html>
