@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	
+	<style>
+		* {
+			padding:0;
+			margin:0;
+		}
+		
+		#form {
+			width:325px;
+			height:400px;
+			background-color:#FFC800;
+			display:grid;
+			grid-template-columns: repeat(4, 70px);
+			grid-auto-rows:70px;
+		}
+		
+		#form input[type="text"] {
+			width:300px;
+			height:50px;
+			text-align:right;
+			padding:10px;
+			grid-column: span 4;
+			background-color:#7878FF;
+			font-size:20px;
+			color:white;
+		}
+		
+		#form button {
+			grid-column: span 1;
+			width:65px;
+			height:65px;
+			margin:25px 25px;
+			background-color:#1E821E;
+			border-radius:10px; 	
+			font-size:20px;
+			
+		}
+		
+		#form button:hover {
+			transform: scale(1.1);
+			transition-duration: 0.5s;
+		}
+		
+	</style>	
+	
+	
+</head>
+
+
+<body>
+	<div id="form">
+		<input type="text" id="display"  value="">
+		<button id="7" value="7">7</button>
+		<button id="8" value="8">8</button>
+		<button id="9" value="9">9</button>
+		<button class="op" id="/" value=" / ">/</button>
+		<button id="4" value="4">4</button>
+		<button id="5" value="5">5</button>
+		<button id="6" value="6">6</button>
+		<button class="op" id="*" value=" * ">*</button>
+		<button id="1" value="1">1</button>
+		<button id="2" value="2">2</button>
+		<button id="3" value="3">3</button>
+		<button class="op" id="-" value=" - ">-</button>
+		<button id="0" value="0">0</button>
+		<button id="c" value="c">C</button>
+		<button id="=" value="=">=</button>
+		<button class="op" id="+" value=" + ">+</button>
+	</div>
+		<script type="text/javascript">
+		
+			window.onload = function() {
+				var c7 = document.getElementById("7");
+				var c8 = document.getElementById("8");
+				var c9 = document.getElementById("9");
+				var div = document.getElementById("/");
+				var c4 = document.getElementById("4");
+				var c5 = document.getElementById("5");
+				var c6 = document.getElementById("6");
+				var mul = document.getElementById("*");
+				var c1 = document.getElementById("1");
+				var c2 = document.getElementById("2");
+				var c3 = document.getElementById("3");
+				var mius = document.getElementById("-");
+				var c0 = document.getElementById("0");
+				var cle = document.getElementById("c");
+				var equals = document.getElementById("=");
+				var plus = document.getElementById("+");
+				var display = document.getElementById("display");
+				var op = document.getElementsByClassName("op");
+				
+				c7.onclick = function() {
+					display.value += c7.value;	
+				}
+				
+				c8.onclick = function() {
+					display.value += c8.value;	
+				}
+				
+				c9.onclick = function() {
+					display.value += c9.value;	
+				}
+				
+				c4.onclick = function() {
+					display.value += c4.value;	
+				}
+				
+				c5.onclick = function() {
+					display.value += c5.value;	
+				}
+				
+				c6.onclick = function() {
+					display.value += c6.value;	
+				}
+				
+				c1.onclick = function() {
+					display.value += c1.value;	
+				}
+				
+				c2.onclick = function() {
+					display.value += c2.value;	
+				}
+				
+				c3.onclick = function() {
+					display.value += c3.value;	
+				}
+				
+				c0.onclick = function() {
+					display.value += c0.value;	
+				}
+				
+				div.onclick = function() {
+					display.value += div.value;
+				}
+				
+				plus.onclick = function() {
+					display.value += plus.value;
+				}
+				
+				mius.onclick = function() {
+					display.value += mius.value;
+				}
+				
+				mul.onclick = function() {
+					display.value += mul.value;
+				}
+				
+				equals.onclick = function() {
+					op = display.value.split(" ");
+					display.value = calculator(); 
+				}
+				
+				c.onclick = function() {
+					display.value = "";
+				}
+				
+				
+				var calculator = function() {
+				
+					switch(op[1]) {
+					
+					case "+" : return parseInt(op[0]) + parseInt(op[2]);
+					break;
+					
+					case "-" : return parseInt(op[0]) - parseInt(op[2]);
+					break;
+					
+					case "*" : return parseInt(op[0]) * parseInt(op[2]);
+					break;
+					
+					case "/" : return parseInt(op[0]) / parseInt(op[2]);
+					break;
+					
+					}//switch문 끝
+					
+				}//calculator function 끝
+				
+				
+			}
+			
+			
+			
+			
+			
+			
+			
+		</script>
+		
+		
+		
+		
+</body>
+</html>
