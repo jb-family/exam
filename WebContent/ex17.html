@@ -3,6 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Insert title here</title>
+	
+	<script type="text/javascript" src="./jquery-1.12.4.js">
+	
+	</script>
+	
+	
 </head>
 <body>
 	<h1>자바스크립트</h1>
@@ -16,10 +22,15 @@
 	
 	
 	
+	
+	
 	<script type="text/javascript">
+	//자바스크립트로 이벤트 처리
 	
 	
 	window.onload = function(){
+		
+		/*
 		//document.getElementById = html에서 id를 js로 바꾸는 방법.
 		var testButton = document.getElementById("btn"); // id = btn 태그 --> 자바스크립트 객체화
 		var testArea = document.getElementById("display"); // id - bisplay 태그 --> 자바스크립트 객체화
@@ -27,15 +38,41 @@
 		//onclick 이벤트 생성
 		testButton.onclick = function(){
 			console.log(testArea.innerHTML = ' <font color="blue">황일영</font> ');
+		};
+		*/
+		
+		//jquery 이벤트 처리
+		/*
+		var testButton = {
+			id: "btn",
+			tag: "button",
+			type: "button",
+			on: function("keydown", b){}
+				
+		};
+		*/
+		
+		//jqeury 사용법 $()안에서 사용해야한다. class는 ".이름" id는 "#이름" 태그는 "태그이름"
+		
+		var testButton = $("#btn");
+		var testArea = $("#display");
+		
+		console.log(testButton);
+		testButton.on("click", function() {
+			console.log("클릭 jequery");
 			
+			testArea.html('<font color="blue">황일영</font>');
+			
+			
+			
+		});
 			
 		};
 		
 		
-		console.log(testButton);	
 		
 	
-	};
+	
 	
 	
 	

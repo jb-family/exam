@@ -6,8 +6,9 @@
 </head>
 <body>
 	
-	<input type="text" id="left" value=""> + <input type ="text" id="right" value="">
-	<button id="btn">더하기</button>
+	<input type="text" id="left" class="red" value=""> + <input type ="text" id="right" class="red" value="">
+	
+	<button id="buttonPlus" type="button" value="+">더하기</button>
 	
 	<p id="p">결과값</p>
 	
@@ -19,6 +20,15 @@
 	var left = document.getElementById("left");
 	var right = document.getElementById("right");
 	var sum = document.getElementById("sum");
+	
+	var btn = document.getElementsByTagName("button");
+	console.log(btn);
+	
+	var inputs = document.getElementsByTagName("input");
+	console.log(inputs);
+	
+	var tags = document.getElementByClassName("red");
+	consol.log(red);s
 	
 	//버튼 클릭이벤트
 	btn.onclick = function(){
